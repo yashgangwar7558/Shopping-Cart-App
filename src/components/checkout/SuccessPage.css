@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mulish;
+}
+
+html {
+  font-size: 55.5%;
+}
+
+
+.successbody {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 253, 253, 0.404);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    padding:1rem;
+}
+
+.successbody .content {
+  width: 45%;
+  height: 30rem;
+  background: linear-gradient(
+    103.49deg,
+    #ffffff -28.13%,
+    rgba(221, 221, 221, 0.5) 116.84%
+  );
+  box-shadow: rgba(3, 126, 44, 0.651) 0rem 0.4rem 1.2rem;
+  border-radius: 2rem;
+  margin: auto;
+  margin: auto;
+  padding:2rem;
+  display: grid;
+  place-items: center;
+}
+
+.successbody .status {
+    font-size: 2rem;
+    margin-top: 10rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.successbody .status h1 {
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}
+.successbody .status img {
+    width: 7rem;
+    height: 7rem;
+    margin-left: 1.5rem;
+}
+
+.successbody .content h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.successbody .content h2 {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.successbody .content button {
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: #06be15;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.successbody .content button:hover {
+    background-color: #06c920;
+}
+
+.successbody .quote {
+    margin-bottom: 15rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}

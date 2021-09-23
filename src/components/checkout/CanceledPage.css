@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mulish;
+}
+
+html {
+  font-size: 55.5%;
+}
+
+
+.canceledbody {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 253, 253, 0.404);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    padding:1rem;
+}
+
+.canceledbody .content {
+  width: 45%;
+  height: 30rem;
+  background: linear-gradient(
+    103.49deg,
+    #ffffff -28.13%,
+    rgba(221, 221, 221, 0.5) 116.84%
+  );
+  box-shadow: rgba(209, 4, 4, 0.616) 0rem 0.4rem 1.2rem;
+  border-radius: 2rem;
+  /* margin: auto;
+  margin: auto; */
+  margin-bottom: 10rem;
+  padding:2rem;
+  display: grid;
+  place-items: center;
+}
+
+.canceledbody .status {
+    font-size: 2rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.canceledbody .status h1 {
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}
+.canceledbody .status img {
+    width: 7rem;
+    height: 7rem;
+    margin-left: 1.5rem;
+}
+
+.canceledbody .content h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.canceledbody .content h2 {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.canceledbody .content h2 span{
+    color: rgb(51, 125, 221)
+}
+
+.canceledbody .content button {
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: #dd1d0f;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.canceledbody .content button:hover {
+    background-color: #ec3a0e;
+}
