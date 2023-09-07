@@ -1,5 +1,5 @@
-// const API = "https://cryptic-badlands-89213.herokuapp.com";
-const API = "http://localhost:8080";
+const API = "https://shopping-cart-app-server.onrender.com";
+// const API = "http://localhost:8080";
 
 export async function fetchFromAPI(endpoint, opts) {
     const { method, body } = { method: 'POST', body: null, ...opts };
