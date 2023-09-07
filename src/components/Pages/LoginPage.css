@@ -1,0 +1,30 @@
+.inputs {
+    border-color: rgb(37, 185, 253);
+    padding: 0.5rem 1rem;
+    width: 50rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    color:rgb(122, 120, 120);
+}
+
+.inputs:focus{
+    outline-style: none; 
+}
+
+.login-btn {
+    border: none;
+    font-size: 1.4rem;
+    padding: 1rem 6rem;
+    color: #fff;
+    background-color: #256ae9;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-left: 14rem;
+}
+
+.login-btn:hover {
+    background-color: #4887fc;
+}

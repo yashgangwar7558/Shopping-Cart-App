@@ -31,7 +31,7 @@ export const products = [
         title: "Iphone 12",
         description: "Best mobile ever",
         price: 90500,
-        img: 'https://www.independent.ie/business/technology/555ff/40373337.ece/AUTOCROP/w620/7704792D-8B8B-40B7-A04B-86B31057658A.jpeg',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRksp3l0VV-aJliJsC45pg2JCBUUGtBh2v0Yeh1CoXy0vNhhpe6QaxCQivTFq0RR6DWbXY&usqp=CAU',
         quantity: 1,
         favourite: false
     },
@@ -112,7 +112,7 @@ export const products = [
         title: "Samsung Galaxy Z",
         description: "Best mobile ever",
         price: 80000,
-        img: 'https://cdn.androidcommunity.com/wp-content/uploads/2020/01/Samsung-Galaxy-Z-Flip-2-phone-696x435.jpg',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyCPLkYsZEgZSHFuxOw2UkiEnrBVyag6Bhhg&usqp=CAU',
         quantity: 1,
         favourite: false
     },
@@ -139,7 +139,7 @@ export const products = [
         title: "Samsung S21",
         description: "Best mobile ever",
         price: 80000,
-        img: 'https://images.financialexpress.com/2021/01/s21ultramain1.jpg',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS5a0Uyk5dvM_b2BNrQacIljdnnUuX7q3zcw&usqp=CAU',
         quantity: 1,
         favourite: false
     },

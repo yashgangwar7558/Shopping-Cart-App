@@ -20,21 +20,17 @@ const AppProvider = ({ children }) => {
     const user = localStorage.getItem("user_id");
 
 
-    useEffect(() => {
-        if (cookies.payload) {
-            setLoginStatus(true);
-        } else {
-            setLoginStatus(false);
-        }
-        //write sawo api to compare between local storage userid
-        //and sawo payload
-    }, [loginStatus, cookies]);
+    // useEffect(() => {
+    //     if (cookies.payload) {
+    //         setLoginStatus(true);
+    //     } else {
+    //         setLoginStatus(false);
+    //     }
+    // }, [loginStatus, cookies]);
 
     const logoutHandler = () => {
         const x = window.confirm("Are you sure you want to logout ?");
         if (x) {
-            localStorage.removeItem("user_id");
-            removeCookie("payload");
             setLoginStatus(false);
         }
     };

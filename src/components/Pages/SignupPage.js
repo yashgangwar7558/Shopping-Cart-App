@@ -3,28 +3,34 @@ import { useHistory } from 'react-router-dom';
 import { useGlobalContext } from '../context'
 import { auth } from "../../auth/firebase-config"
 import { Link } from 'react-router-dom'
-import './LoginPage.css'
+import './SignupPage.css'
 
-export default function Login() {
+export default function Signup() {
 
-    const history = useHistory()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [name, setName] = useState("")
+    const [confirmpassword, setConfirmPassword] = useState("")
     let { loginStatus, setLoginStatus } = useGlobalContext()
+    const history = useHistory()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        auth.signInWithEmailAndPassword(email, password)
-            .then((userCredential) => {
-                // Signed in 
-                history.push("/")
-                setLoginStatus(true)
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorMessage)
-            });
+        if (password === confirmpassword) {
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    history.push("/")
+                    setLoginStatus(true)
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(errorMessage)
+                });
+        } else {
+            alert("Password and confirm password are not same")
+        }
     }
 
     return (
@@ -50,7 +56,7 @@ export default function Login() {
                     textAlign: 'center',
                     margin: '2rem'
                 }}>
-                    <h2 style={{ fontFamily: 'sans-serif', fontSize: '3rem' }}>Login Here</h2>
+                    <h2 style={{ fontFamily: 'sans-serif', fontSize: '3rem' }}>SignUp Here</h2>
                 </div>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <div className="input-field" style={{
@@ -59,23 +65,15 @@ export default function Login() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}>
+                        <input type="text" className="inputs" placeholder="Username" onChange={(e) => { setName(e.target.value) }} value={name} />
                         <input type="email" className="inputs" placeholder="Email" onChange={(e) => { setEmail(e.target.value) }} value={email} />
                         <input type="password" className="inputs" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} value={password} />
+                        <input type="password" className="inputs" placeholder="Confirm Password" onChange={(e) => { setConfirmPassword(e.target.value) }} value={confirmpassword} />
                     </div>
-                    <button type="submit" className="login-btn">Login</button>
+                    <button type="submit" className="signup-btn">Sign Up</button>
                 </form>
-                <h6 style={{ margin: "3rem", fontSize: "2rem", textAlign: "center" }}>New User? <Link to="/signup">Sign up</Link></h6>
+                <h6 style={{ margin: "3rem", fontSize: "2rem", textAlign: "center" }}>Already have an account? <Link to="/login">Log in</Link></h6>
             </div>
-            <div style={{ margin: '4rem' }}>
-                <button style={{
-                    border: 'none',
-                    borderRadius: '1rem',
-                    backgroundColor: '#6cc42d',
-                    color: 'white',
-                    textTransform: 'uppercase',
-                    padding: '1rem 2rem'
-                }} onClick={() => history.push('/')}>Go back to Home</button>
-            </div>
-        </div >
+        </div>
     )
 }
